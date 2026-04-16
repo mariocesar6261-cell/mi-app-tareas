@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <style>
+        /* Estilos básicos para que se vea bonito */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 30px;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #005a9e;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            background-color: #f9f9f9;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Agregar Nueva Tarea</h2>
+        
+        <div class="input-group">
+            <input type="text" id="tareaInput" placeholder="¿Qué necesitas hacer?">
+            <button id="btnGuardar">Guardar</button>
+        </div>
+
+        <h3>Mis Tareas:</h3>
+        <ul id="listaTareas">
+            <li>Cargando tareas desde SQL Server...</li>
+        </ul>
+    </div>
+
+    <!-- Este script conecta el HTML con nuestra lógica de Node.js y Base de Datos -->
+    <script src="./renderer.js"></script>
+</body>
+</html>

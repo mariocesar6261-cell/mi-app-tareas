@@ -1,0 +1,35 @@
+{
+  "description": "Mi primera aplicación de escritorio",
+  "name": "mi-app-tareas",
+  "version": "1.0.0",
+  "main": "main.js",
+  "build": {
+  "appId": "com.tuNombre.appTareas",
+  "win": {
+    "target": "nsis"
+  },
+  "publish": {
+    "provider": "github",
+    "owner": "TU_USUARIO_DE_GITHUB",
+    "repo": "NOMBRE_DE TU_REPOSITORIO"
+  }
+  
+},
+  "scripts": {
+  "start": "electron .",
+  "build": "electron-builder"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    
+    "mssql": "^12.3.0"
+  },
+  "devDependencies": {
+    "electron": "^41.2.1",
+    "electron-builder": "^26.8.1"
+  }
+  
+}
